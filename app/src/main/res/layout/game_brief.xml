@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/bg"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+
+    <LinearLayout
+        android:id="@+id/game_brief_header_id"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/header_bg"
+        android:layout_margin="16dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/game_brief_header"
+            android:textSize="36sp"
+            android:fontFamily="@font/steelfish_eb"
+            android:shadowDx = "4"
+            android:shadowDy = "4"
+            android:shadowRadius = "1"
+            android:shadowColor = "#fff"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/game_brief_content_id"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/content_bg"
+        android:layout_margin="16dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/game_brief_header_id"
+        app:layout_constraintBottom_toTopOf="@id/game_brief_actions_id"
+        >
+
+        <TextView
+            android:id="@+id/game_brief_game_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/game_list_header"
+            android:textSize="48sp"
+            android:maxLines="2"
+            android:fontFamily="@font/steelfish_eb"
+            android:shadowDx = "4"
+            android:shadowDy = "4"
+            android:shadowRadius = "1"
+            android:shadowColor = "#fff"
+            />
+
+        <TextView
+            android:id="@+id/game_brief_game_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/game_list_header"
+            android:textSize="24sp"
+            android:maxLines="4"
+            android:fontFamily="@font/steelfish_rg"
+            android:shadowDx = "4"
+            android:shadowDy = "4"
+            android:shadowRadius = "1"
+            android:shadowColor = "#fff"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/game_brief_actions_id"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/actions_bg"
+        android:layout_margin="16dp"
+        android:orientation="horizontal"
+        android:gravity="right|center"
+        app:layout_constraintTop_toBottomOf="@id/game_brief_content_id"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <ImageButton
+            android:id="@+id/action_ok"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:scaleType="centerInside"
+            android:background="@drawable/correct"
+            android:layout_marginRight="32dp"
+            />
+        <ImageButton
+            android:id="@+id/action_cancel"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:scaleType="centerInside"
+            android:background="@drawable/wrong"
+            android:layout_marginRight="32dp"
+            />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
